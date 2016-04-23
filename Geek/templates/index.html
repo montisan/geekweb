@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Geek</title>
+</head>
+<body>
+
+	<script type="text/javascript" src="../static/js/build/react.js"></script>
+	<script type="text/javascript" src="../static/js/build/JSXTransformer.js"></script>
+
+	<script type="text/jsx">
+		
+		var Header = React.createClass({
+
+			searchHandle: function() {
+				alert('Searching');
+			},
+
+			render: function() {
+				return (
+						<header>
+							<h1>Geek</h1>
+							<input type='text' />
+							<button onClick={this.searchHandle}>搜索</button>
+						</header>
+					)
+			}
+		});
+
+		var GeekList = React.createClass({
+
+
+			render: function() {
+				return (
+						<div>
+							<p>Geek List</p>
+
+						</div>
+					)
+			}
+
+		});
+
+		var Main = React.createClass({
+
+			render: function() {
+				return (
+						<div>
+							<Header/>
+							<GeekList/>
+						</div>
+					)
+			}
+		});
+
+		React.render(<Main />, document.body);
+
+	</script>
+
+
+	
+</body>
+</html>
